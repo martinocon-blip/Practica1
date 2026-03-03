@@ -1,0 +1,18 @@
+#include <Arduino.h>
+
+// ¡Cambio aquí! Ahora usamos el pin 2 (GPIO2) que es donde lo habéis conectado
+const int pinLed = 21; 
+
+void setup() {
+  pinMode(pinLed, OUTPUT);
+  Serial.begin(115200);
+}
+
+void loop() {
+  digitalWrite(pinLed, HIGH);
+  Serial.println("ON");
+  delay(500);
+  digitalWrite(pinLed, LOW);
+  Serial.println("OFF");
+  delay(500);
+}
